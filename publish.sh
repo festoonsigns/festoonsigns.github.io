@@ -28,7 +28,7 @@ echo -e "\033[0;32mPushing changes to Github...\033[0m"
 # git push origin master
 # Commit changes.
 
-g push origin source
+git push origin source
 
 echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 
