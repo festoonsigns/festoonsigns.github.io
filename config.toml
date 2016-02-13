@@ -20,7 +20,7 @@ theme = "hugo-creative-theme"
 	# To provide some metadata for search engines feel free to add a few
     # information about you and your website.
 	name = "Fesoon Signs LLC"
-	description = "Your description"
+	description = "Advertising and Production"
 
 	# The path must be relative to the static folder
 	favicon = "favicon.ico"

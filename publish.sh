@@ -22,30 +22,17 @@ if [ $# -eq 1 ]
 fi
 git commit -m "$msg"
 
-echo -e "\033[0;32mDeploying updates to Github...\033[0m"
+echo -e "\033[0;32mPushing changes to Github...\033[0m"
 
 # Push source and build repos.
 # git push origin master
-
-echo -e "\033[0;32mSwitching to Deploy DIR...\033[0m"
-
-# Start deployment
-DD="$DIR/deploy"
-cd $DD
-
-# Add changes to git.
-git add --all .
-
 # Commit changes.
-msg="Website updates with new changes on `date`"
-if [ $# -eq 1 ]
-  then msg="$1"
-fi
-git commit -m "$msg"
+
+g push origin source
 
 echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 
 # Push source and build repos.
-git push -f origin master
+git push origin `git subtree split --prefix public source`:master
 
 echo -e "\033[0;32mChanges successfully published!\033[0m"
