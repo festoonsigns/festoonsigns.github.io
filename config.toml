@@ -1,11 +1,11 @@
 baseurl = "http://festoonsigns.github.io/"
 languageCode = "en-us"
 title = "Festoon Signs LLC"
-theme = "hugo-creative-theme"
+theme = "festoon-signs"
 
 [params]
 
-	# You can use Markdown syntax for urls [text](//url.to/source) for
+	# You can use Markdown syntax for urls [text](gs//url.to/source) for
 	# most longer texts.
 
 	# All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
@@ -31,9 +31,10 @@ theme = "hugo-creative-theme"
 		brand = "Festoon Signs LLC"
 
 		[params.navigation.links]
+			home      = "Home"
 			about     = "About"
 			services  = "Services"
-			portfolio = "Portfolio"
+			portfolio = "Gallery"
 			contact   = "Contact"
 
 
