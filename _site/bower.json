@@ -1,0 +1,22 @@
+{
+  "name": "horizon_festoon",
+  "homepage": "https://github.com/CloudCannon/Horizons-Jekyll-Theme",
+  "authors": [
+    "Shidhin C R <shidhincr@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lightgallery": "~1.2.21"
+  }
+}
