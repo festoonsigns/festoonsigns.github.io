@@ -28,11 +28,11 @@ echo -e "\033[0;32mPushing changes to Github...\033[0m"
 # git push origin master
 # Commit changes.
 
-git push -f origin source
+git push origin source
 
 echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 
 # Push source and build repos.
-git push -f origin `git subtree split --prefix _site source`:master
+git push origin `git subtree split --prefix _site source`:master --force
 
 echo -e "\033[0;32mChanges successfully published!\033[0m"
