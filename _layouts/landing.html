@@ -3,53 +3,63 @@ layout: default
 ---
 
 <!-- Header -->
-			<div id="header">
-				<div class="container">
+<div id="header">
+	<div class="container" id="home">
 
-					<!-- Logo -->
-						<h1><a href="#" id="logo">{{ page.title }}</a></h1>
+		<!-- Logo -->
+		<h1><a href="#" id="logo">
+			<img class="logo-image" src="/assets/images/logo-color.jpg" alt="Festoon Signs LLC" />
+		</a></h1>
+		{% include nav.html %}
 
-					{% include nav.html %}
-
-					<!-- Banner -->
-						<div id="banner">
-							<div class="container">
-								<section>
-									<header class="major">
-										<h2>Welcome to Horizons!</h2>
-										<span class="byline">&hellip; a responsive HTML5 site template freebie by <a href="http://templated.co">TEMPLATED</a>. Released for free under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so use it for whatever (personal or commercial) &ndash; just give us credit!</span>
-									</header>
-									<a href="#" class="button alt">Sign Up</a>
-								</section>
-							</div>
-						</div>
-
-				</div>
-			</div>
-
-		<!-- Featured -->
-			<div class="wrapper style2">
-				<section class="container">
+		<!-- Banner -->
+		<div id="banner">
+			<div class="container">
+				<section>
 					<header class="major">
-						<h2>Nulla luctus eleifend</h2>
-						<span class="byline">Mauris vulputate dolor sit amet nibh</span>
+						<h2>Festoon Signs LLC</h2>
+						<span class="byline">Festoon Signs LLC is a total signage solution company having its well-equipped facility located at Al Quoz Industrial area 3, Dubai.</span>
 					</header>
-					<div class="row no-collapse-1">
-						<section class="4u">
-							<a href="#" class="image feature"><img src="{{ site.baseurl }}/assets/images/pic02.jpg" alt=""></a>
-							<p>Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat.</p>
-						</section>
-						<section class="4u">
-							<a href="#" class="image feature"><img src="{{ site.baseurl }}/assets/images/pic03.jpg" alt=""></a>
-							<p>Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis. Donec magna.</p>
-						</section>
-						<section class="4u">
-							<a href="#" class="image feature"><img src="{{ site.baseurl }}/assets/images/pic04.jpg" alt=""></a>
-							<p>Curabitur sem urna, consequat vel, suscipit convallis sem leo, mattis placerat, nulla. Sed ac leo.</p>
-						</section>
-
-					</div>
+					<a data-pagescroll="#services" href="#services" class="button alt">Find out more</a>
 				</section>
 			</div>
+		</div>
 
-	{{ content }}
+	</div>
+</div>
+
+<!-- Featured -->
+<div class="wrapper style2" id="about">
+	<section class="container">
+		<header class="major">
+			<h2>A First Impression That Lasts…</h2>
+			<p>
+				Festoon Signs, a Dubai signage company, values high quality outdoor signs; a trait that speaks volumes of the brand it represents. Being the first point of contact, our signage solutions, engineered to excellence, create a first impression that lasts through powerful design.
+			</p>
+			<h2>We've Got What You Need !</h2>
+			<p>
+				A team of dedicated and creative professionals strive hard passionately, to deliver unmatched quality and variety of modern signs, catering to prestigious projects involving Shopping Malls, Corporate Houses, Banks, Hotels, Financial Institutions, Hospitals,
+				Retail Chains, Restaurants and Universities.
+			</p>
+			<p>
+				From conceptual designing to installation stage, all kinds of internal and external signs are made as per niche clientele requirement at our factory premises consisting of state of the art machineries, CNC Router, laser machine and digital printers.
+			</p>
+			<p>
+				All kinds of external &amp; Internal signs, Digital printed graphics , frosted film , Vehicle graphics.. etc
+			</p>
+		</header>
+		<header class="major" id="gallery">
+			<h2>Gallery</h2>
+		</header>
+		<div class="gallery">
+			{% for imgNumber in (1...site.gallery.totalImages) %}
+			<div>
+				<a href="/gallery" class="image feature"><img src="{{ site.baseurl }}/assets/images/gallery/{{ imgNumber }}.jpg" alt=""></a>
+			</div>
+			{% endfor %}
+		</div>
+		<a href="/gallery" class="button alt small">View All</a>
+	</section>
+</div>
+
+{{ content }}

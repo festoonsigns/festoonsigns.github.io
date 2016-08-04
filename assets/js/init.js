@@ -65,12 +65,56 @@
 
 			}
 
-		// Dropdowns.
-			$('#nav > ul').dropotron({
-				offsetY: -15,
-				hoverDelay: 0
-			});
+        // Slick carousel
+        $('.gallery').slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+						responsive: [
+					    {
+					      breakpoint: 500,
+					      settings: {
+					        slidesToShow: 1,
+					        slidesToScroll: 1
+					      }
+					    },
+					    {
+					      breakpoint: 800,
+					      settings: {
+					        slidesToShow: 2,
+					        slidesToScroll: 2
+					      }
+					    }
+						]
+        });
 
+				var animate = function(selector){
+					var target = $(selector);
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top - 50
+					}, {
+						duration: 500,
+						always: function(){
+							window.location.hash = selector;
+						}
+					});
+				}
+
+				// Scroll sections
+				$('body').on('click', '[data-pagescroll]', function(e){
+					var selector = $(this).data('pagescroll');
+					animate(selector);
+					e.stopPropagation();
+					e.preventDefault();
+				});
+
+				// sticky menu
+				$("#nav").sticky({topSpacing:0});
+
+				// gallery
+				$('#lightgallery').lightGallery({
+					selector: '.item',
+					thumbnail:true
+				});
 	});
 
 })(jQuery);

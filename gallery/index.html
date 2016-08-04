@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div id="header">
+	<div class="container" id="home">
+
+		<!-- Logo -->
+		<h1>
+      <a href="/" id="logo">
+  			<img class="logo-image" src="/assets/images/logo-color.jpg" alt="Festoon Signs LLC" />
+  		</a>
+    </h1>
+    <nav id="nav">
+  		<ul>
+  			{% assign current = page.url | downcase | split: '/' %}
+  			<li {% if current[1] == 'index.html' %}class='current'{% endif %}><a href="{{site.baseurl}}/"><< Home</a></li>
+  		</ul>
+  	</nav>
+
+		<!-- Banner -->
+    <div id="gallery-view" class="wrapper">
+  		<section class="container">
+  			<header class="major">
+  				<h2>Gallery</h2>
+          <h3>Click to see the bigger image</h3>
+  			</header>
+        <div class="row">
+          <div id="lightgallery">
+            {% for imgNumber in (1...site.gallery.totalImages) %}
+            <a class="item" href="{{ site.baseurl }}/assets/images/gallery/{{ imgNumber }}.jpg">
+                <img src="{{ site.baseurl }}/assets/images/gallery/{{ imgNumber }}.jpg" alt="">
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+  		</section>
+    </div>
+
+	</div>
+</div>

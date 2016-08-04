@@ -1,4 +1,6 @@
-name: Horizons
-description: Horizons template for Jekyll
+name: Festoon Signs
+description: Festoon Signs LLC
 paginate: 10
-baseurl: '/Horizons-Jekyll-Theme'
+baseurl: ''
+gallery: 
+    totalImages: 32

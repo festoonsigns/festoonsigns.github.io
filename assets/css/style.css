@@ -405,7 +405,7 @@
 		-o-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background: #3ac984;
+		background: #009688;
 		border-radius: 40px;
 		border: 0;
 		color: white;
@@ -423,7 +423,7 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background-color: #32b777;
+			background-color: #05b3a2;
 		}
 
 		input[type="submit"].fit,
@@ -471,7 +471,7 @@
 /* Header */
 
 	#header {
-		background: #333333 url("../images/pic01.jpg") no-repeat;
+		background: #333333 url("../images/header.jpg") no-repeat;
 		background-size: cover;
 		color: #fff;
 		padding: 6em 0;
@@ -588,7 +588,7 @@
 			line-height: 1.6em;
 			font-size: 1.5em;
 		}
-		
+
 		#banner a {
 			color: inherit;
 		}
@@ -655,3 +655,60 @@
 		#footer a {
 			color: inherit;
 		}
+/** Added by Shidhin **/
+a.social-icons {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.slick-slide {
+    margin: 0 10px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #2196F3;
+    font-size: 25px;
+}
+
+a.image.feature {
+    height: 170px;
+}
+
+a.image.feature img {
+    max-height: 100%;
+}
+
+.is-sticky #nav {
+    width: 100% !important;
+    left: 0;
+    background-color: #0b3759;
+		box-shadow: 0 0 5px #000;
+}
+
+#logo img.logo-image {
+	box-shadow: 0 3px 6px #092a4b;
+}
+
+.title img.logo-image {
+	height: 44px;
+}
+
+#lightgallery .item {
+  display: inline-block;
+  height: auto;
+  width: 200px;
+  margin: 10px;
+  vertical-align: middle;
+	border: 2px solid #333;
+}
+
+#lightgallery .item img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#gallery-view {
+	background-color: #fff;
+	color: #333;
+}
