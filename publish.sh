@@ -33,6 +33,6 @@ git push -f origin source
 echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 
 # Push source and build repos.
-git push origin `git subtree split --prefix _site source`:master
+git push -f origin `git subtree split --prefix _site source`:master
 
 echo -e "\033[0;32mChanges successfully published!\033[0m"
